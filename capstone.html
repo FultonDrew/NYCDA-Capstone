@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>NYCDA Capstone Project - Hangman</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</head>
+<body>
+
+
+<input type="text" id="input" value="" action="capstone.js">
+
+<div id='gameBoard'></div>
+<input type="submit" value="Submit" id='submitButton'>
+<input type="submit" value="Start" id='startButton'>
+<div id='usedLetters'></div><!DOCTYPE html>
+<html>
+<head>
+	<title>NYCDA Capstone Project - Hangman</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+<div class='header'>
+<span id='hangman'>Hangman</span><br>
+<span id='game'>A game by Drew Fulton</span>
+</div>
+<div class='wrapper'>
+<div class='inputContainer'>
+<input type="text" id="input" value="" action="capstone.js">
+<input type="submit" value="Submit" id='submitButton' onclick="inputGuess()">
+<input type="submit" value="Start New Game" id='startButton'>
+<input type="submit" value="Hint" id='hintButton'>
+</div>
+<div id='gameBoard'></div>
+<div id='hintBox'></div>
+
+<div id='boxesContainer'>
+<div id='usedBox'></div>
+<div id='turnsLeft'></div>
+</div>
+</div>
+
+<script type="text/javascript" src='index.js'></script>
+</body>
+</html>
+
+
+<script type="text/javascript" src='capstone.js'></script>
+</body>
+</html>
