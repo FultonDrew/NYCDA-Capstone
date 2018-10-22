@@ -82,6 +82,7 @@ function startGame(){
       brick.style.height = "90px";
       brick.style.display = "inline-block";
       brick.style.margin = "15px"
+      brick.style.borderRadius = "5px"
       brick.style.fontSize = "3.5em"
       brick.style.textAlign = "center"
       brick.style.overflow = "hidden"
@@ -103,11 +104,11 @@ function startGame(){
       letterContainer.id = "letterContainer";
       usedBox.appendChild(letterContainer)
       letterContainer.style.width = "55px*usedLetters";
-      letterContainer.style.height = "98%";
-      letterContainer.style.margin = "0 auto";
+      letterContainer.style.height = "78%";
+      letterContainer.style.margin = "20px auto";
       letterContainer.style.display = "inline-block";
       letterContainer.style.backgroundColor = "#D0D0D0";
-      letterContainer.style.fontSize = "3em"
+      letterContainer.style.fontSize = "2em";
       letterContainer.style.textAlign = "center"
 
     //adds a hint box
@@ -115,8 +116,8 @@ function startGame(){
       hintContainer.id = "hintContainer";
       hintBox.appendChild(hintContainer);
       
-      hintContainer.style.width = "500px*randomWord.hint.length";
-      hintContainer.style.height = "200px*randomWord.hint.length";
+      hintContainer.style.width = "200px";
+      hintContainer.style.height = "60px";
       hintContainer.style.display = "inline-block";
       hintContainer.style.padding = "10px"
       hintContainer.style.borderRadius = "5px";
@@ -128,7 +129,8 @@ function startGame(){
       turnCounter.id = "turnCounter";
       turnsLeft.appendChild(turnCounter);
       turnCounter.style.width = "100%";
-      turnCounter.style.height = "100%";
+      turnCounter.style.height = "75%";
+      turnCounter.style.margin = "20px auto";
       turnCounter.style.display = "block";
       turnCounter.style.fontSize = "2em"
       turnCounter.style.textAlign = "center"
@@ -150,7 +152,7 @@ function startGame(){
 function inputGuess(){
   var guess = input.value.toLowerCase();
   if(guess.length !== 1) {
-    alert("please enter a single letter");
+    alert("Please enter a single letter");
     } else {
       // console.log(guess);
       let wrongletter = false;
