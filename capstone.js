@@ -1,90 +1,5 @@
 
 var start = document.getElementById('startButton');
-
-
-
-start.addEventListener("click", function(){
-    startGame();
-    console.log('game started');
-});
-
-var words = ["apple", "banana","orange","grape","canteloupe","watermelon","apricot","mango","starfruit", "dragonfruit","tangerine","lemon", "kiwi"];
-var word = words[Math.floor(Math.random() * words.length)];
-console.log(word);
-var answerArray = [];
-var usedLetters = [];
-var usedLettersBox = document.getElementById('usedLetters');
-var remainingLetters = word.length;
-var gameBoard = document.getElementById('gameBoard');
-
-function startGame(){
-
-    console.log('game stared');
-    
-    console.log('gam started');
-    
-    console.log('game started');
-    document.createElement("div")
-    
-    gameBoard.style.width = "150px";
-    gameBoard.style.height = "50px";
-    gameBoard.style.border = "2px solid black";
-    usedLettersBox.style.width = "150px";
-    usedLettersBox.style.height = "50px";
-    usedLettersBox.style.border = "2px solid black";
-    for (let i = 0; i < word.length;i++){
-      answerArray[i] = "_";
-      console.log('answerArray');
-      gameBoard.innerHTML = answerArray.join(" ");
-      
-      
-    }
-};
-
-
-
-var submit = document.getElementById('submitButton');
-
-
-
-function inputGuess(){
-  var input = document.getElementById('input');
-  var submit = document.getElementById('submitButton');
-  var guess = input.value;
-  if(guess.length !== 1) {
-    console.log("please enter a single letter");
-  } else {
-    console.log(guess);
-    for (let j = 0; j<word.length; j++) {
-      
-      if (word[j] === guess) {
-        answerArray[j] === guess;
-        answerArray[j] = guess;
-
-        gameBoard.innerHTML = answerArray.join(" ");
-        console.log('hello')
-        remainingLetters--;
-        if(remainingLetters === 0){
-          alert("Good job! The answer was " + word);
-          }
-        
-      }
-
-      }
-
-          usedLetters.push(guess);
-          usedLettersBox.innerHTML = usedLetters;
-          if( usedLetters == 3){
-            alert("Game over");
-          }
-    }
-    
-  }
-
-
-
-
-var start = document.getElementById('startButton');
 var hint = document.getElementById('hintButton');
 var body = document.getElementById('body');
 var gameBoard = document.getElementById('gameBoard');
@@ -146,7 +61,7 @@ function startGame(){
       container.className = "brickContainer";
       container.style.border = "2px solid black";
       container.style.borderRadius = "5px";
-      container.style.width = "90%";
+      container.style.width = "20px*randomWord.word.length";
       container.style.height = "60%";
       container.style.display = "inline-block";
       // container.style.backgroundColor = "#E5D0C4";
@@ -314,74 +229,5 @@ hint.addEventListener("click", function(){
 });
 
 
-
-
-
-
-
-
-
-
-// var remainingLetters = word.length;
-// var gameBoard = document.getElementById('gameBoard');
-// gameBoard.style.width = "150px";
-// gameBoard.style.height = "50px";
-// gameBoard.style.border = "2px solid black";
-// var input = document.getElementById('input');
-// var submitButton = document.getElementById('submitButton');
-// var start = document.getElementById('startButton');
-
-
-// while (remainingLetters > 0){
-//   gameBoard.innerHTML = answerArray.join(" ");
-//   var guess = input.value;
-
-//   if(guess ==- null) {
-//     break;
-//   } else if (guess.length !== 1) {
-//     alert("Please enter a single letter.");
-//   } else {
-//   console.log(guess);
-//      for (var j = 0; j < word.length; j++) {
-//       if (word[j] === guess) {
-//         answerArray[j] = guess;
-//         remainingLetters--;
-//       }
-//     }
-//   }
-//   }
-// gameBoard.innerHTML = answerArray.join(" ");
-// // alert("Good job! The answer was " + word);
-//   console.log(guess);
-
-// var words = ["apple", "banana","orange","apple","grape","canteloupe","watermelon","apricot","mango","starfruit"];
-
-// var word = words[Math.floor(Math.random() * words.length)];
-
-// var answerArray = [];
-// for (let i = 0; i<word.length;i++){
-//   answerArray[i] = "_";
-// }
-
-// var remainingLetters = word.length;
-
-// while (remainingLetters > 0){
-//   alert(answerArray.join(" "));
-//   var guess = prompt("Guess a letter, or click cancel to stop playing.");
-//   if(guess ==- null) {
-//     break;
-//   } else if (guess.length !== 1) {
-//     alert("Please enter a single letter.");
-//   } else {
-//     for (var j = 0; j < word.length; j++) {
-//       if (word[j] === guess) {
-//         answerArray[j] = guess;
-//         remainingLetters--;
-//       }
-//     }
-//   }
-//   }
-// // alert(answerArray.join(" "));
-// // alert("Good job! The answer was " + word);
 
 
