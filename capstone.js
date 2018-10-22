@@ -61,7 +61,7 @@ function startGame(){
       container.className = "brickContainer";
       container.style.border = "2px solid black";
       container.style.borderRadius = "5px";
-      container.style.width = "70px*randomWord.hint.length";
+      container.style.width = "20px*randomWord.word.length";
       container.style.height = "60%";
       container.style.display = "inline-block";
       // container.style.backgroundColor = "#E5D0C4";
